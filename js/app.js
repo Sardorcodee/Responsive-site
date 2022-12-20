@@ -12,6 +12,17 @@ sear.addEventListener("click", function () {
   none.setAttribute("class", "d-none");
   web.setAttribute(`src`, `${inner}`);
 });
+function keybord(e) {
+  if (e.key === "Enter") {
+    let inner = input.value;
+    web.style.display = "block";
+    console.log(inner);
+    body2.setAttribute("class", "bg-dark");
+    none.setAttribute("class", "d-none");
+    web.setAttribute(`src`, `${inner}`);
+  }
+}
+document.addEventListener("keyup", keybord, false);
 web.style.display = "none";
 let devv = document.querySelector("#de1");
 let dev = document.querySelector("#de2");
